@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'demo1.ubuntu-server'
-set :repo_url, 'git@bitbucket.org:f-plante/demo1.git'
+set :repo_url, 'git@github.com:f-plante/demo1.git'
 
 set :rvm_type, :system
 set :rvm_ruby_version, '2.0.0-p353'
@@ -12,6 +12,7 @@ set :rvm_ruby_version, '2.0.0-p353'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/var/www/demo1.ubuntu-server'
+set :deploy_via, :remote_cache
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -20,7 +21,7 @@ set :deploy_to, '/var/www/demo1.ubuntu-server'
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-set :log_level, :info
+set :log_level, :debug
 
 # Default value for :pty is false
 # set :pty, true
