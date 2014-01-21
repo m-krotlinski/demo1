@@ -3,13 +3,15 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+gem 'bootstrap-sass'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem "rb-readline", "~> 0.5.0"
 end
 
 gem 'mysql2'
-
 
 group :test do
   gem 'selenium-webdriver'
