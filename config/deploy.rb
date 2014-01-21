@@ -12,7 +12,7 @@ set :rvm_ruby_version, '2.0.0-p353'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/var/www/demo1.ubuntu-server'
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -21,7 +21,7 @@ set :deploy_via, :remote_cache
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-set :log_level, :info
+set :log_level, :debug
 
 # Default value for :pty is false
 # set :pty, true

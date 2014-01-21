@@ -5,6 +5,7 @@ gem 'rails', '4.0.2'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 gem 'mysql2'
@@ -13,6 +14,7 @@ gem 'mysql2'
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+  gem 'libnotify'
 end
 
 group :development do
