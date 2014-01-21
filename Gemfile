@@ -4,13 +4,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'rspec-rails'
 end
 
-group :production do
-  gem 'mysql2'
-end
+gem 'mysql2'
+
 
 group :test do
   gem 'selenium-webdriver'
