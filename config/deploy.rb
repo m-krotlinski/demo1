@@ -39,6 +39,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/sys
 # set :keep_releases, 5
 
 namespace :deploy do
+  after :publishing, :restart
 
   desc 'Restart application'
   task :restart do
@@ -47,8 +48,6 @@ namespace :deploy do
       execute :touch, release_path.join('tmp/restart.txt')
     end
   end
-
-  after :publishing, :restart
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
