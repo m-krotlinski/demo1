@@ -6,12 +6,15 @@ gem 'rails', '4.0.2'
 gem 'bootstrap-sass'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem "rb-readline", "~> 0.5.0"
 end
 
-gem 'mysql2'
+group :production do
+  gem 'mysql2'
+end
 
 group :test do
   gem 'selenium-webdriver'
