@@ -22,5 +22,6 @@ module Demo1
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     I18n.enforce_available_locales = true
+    config.force_ssl = true
   end
 end
