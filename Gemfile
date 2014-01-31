@@ -5,6 +5,9 @@ gem 'rails', '4.0.2'
 
 gem 'bootstrap-sass'
 
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
@@ -26,6 +29,7 @@ end
 group :development do
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
+  gem 'faker'
 end
 
 # Use SCSS for stylesheets
