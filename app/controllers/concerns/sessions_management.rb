@@ -2,7 +2,7 @@ module SessionsManagement
   extend ActiveSupport::Concern
 
   included do
-    helper_method :signed_in?, :current_user
+    helper_method :signed_in?, :current_user, :current_user?
   end
 
   def sign_in(user)
