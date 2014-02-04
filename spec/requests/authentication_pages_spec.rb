@@ -131,7 +131,7 @@ describe "Authentication" do
       specify { expect(response).to redirect_to(root_url) }
     end
 
-    describe "submitting a POST request to the Users#update action" do
+    describe "submitting a POST request to the Users#create action" do
       before { post users_path }
       specify { expect(response).to redirect_to(root_url) }
     end
