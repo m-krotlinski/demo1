@@ -15,3 +15,13 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+var maxchars = 140;
+
+$('textarea').keyup(function () {
+    var tlength = $(this).val().length;
+    $(this).val($(this).val().substring(0, maxchars));
+    var tlength = $(this).val().length;
+    remain = maxchars - parseInt(tlength);
+    console.log('her');
+    $('#remaining').text(remain);
+});

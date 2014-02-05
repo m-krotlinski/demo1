@@ -1,7 +1,25 @@
+
+
 <%= form_for(@micropost) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
     <div class="field">
       <%= f.text_area :content, placeholder: "Compose new micropost..." %>
     </div>
+    <span id="remaining"></span>
     <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>
+
+<script>
+
+    var maxchars = 140;
+
+    $('textarea').keyup(function () {
+        var tlength = $(this).val().length;
+        $(this).val($(this).val().substring(0, maxchars));
+        var tlength = $(this).val().length;
+        remain = maxchars - parseInt(tlength);
+        console.log('her');
+        $('#remaining').text(remain + ' remaining characters');
+    });
+
+</script>
