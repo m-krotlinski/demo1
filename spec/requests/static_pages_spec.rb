@@ -31,6 +31,14 @@ describe "Static pages" do
           expect(page).to have_selector("li##{item.id}", text: item.content)
         end
       end
+
+      it "should handle micropost count with proper pluralization" do
+        expect(page).to have_selector('span', text: '2 microposts')
+        user.microposts.last.destroy
+        visit root_path
+        expect(page).to have_selector('span', text: '1 micropost')
+        expect(page).to_not have_selector('span', text: '1 microposts')
+      end
     end
   end
 
