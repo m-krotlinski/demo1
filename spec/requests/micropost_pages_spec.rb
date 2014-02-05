@@ -42,4 +42,21 @@ describe "Micropost pages" do
       end
     end
   end
+
+  describe "micropost listing" do
+    let!(:other_user) { FactoryGirl.create(:user) }
+    let!(:m1) { FactoryGirl.create(:micropost, user: user, content: "Foo") }
+    let!(:m2) { FactoryGirl.create(:micropost, user: other_user, content: "Bar") }
+
+    before { visit root_path }
+    it "should show delete link for current signed in user micropost" do
+      page.save_page(Rails.root.join('test.html'))
+      expect(page).to have_link('delete', href: micropost_path(m1))
+    end
+
+    it "should only show delete link for current signed in user micropost" do
+      expect(page).to_not have_link('delete', href: micropost_path(m2))
+    end
+
+  end
 end
