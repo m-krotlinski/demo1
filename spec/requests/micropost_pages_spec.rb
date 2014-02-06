@@ -50,7 +50,6 @@ describe "Micropost pages" do
 
     before { visit root_path }
     it "should show delete link for current signed in user micropost" do
-      page.save_page(Rails.root.join('test.html'))
       expect(page).to have_link('delete', href: micropost_path(m1))
     end
 
